@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="https://www.woltlab.com"
+	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.woltlab.com https://www.woltlab.com/XSD/5.5/acpMenu.xsd">
+	<import>
+		<acpmenuitem name="wcf.acp.menu.link.configuration.kimai.kimaiUserListPage">
+			<controller>wcf\acp\page\KimaiUserListPage</controller>
+			<parent>wcf.acp.menu.link.configuration.kimai</parent>
+			<permissions>admin.kimai.canManageUsers</permissions>
+		</acpmenuitem>
+	</import>
+</data>
