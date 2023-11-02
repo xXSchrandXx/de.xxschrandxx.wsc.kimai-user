@@ -1,20 +1,22 @@
-{include file='header'}
+{capture assign='__contentHeader'}
+	<header class="contentHeader">
+		<div class="contentHeaderTitle">
+			<h1 class="contentTitle">
+				{lang}wcf.page.kimaiUserList.title{/lang}
+			</h1>
+		</div>
 
-<header class="contentHeader">
-	<div class="contentHeaderTitle">
-		<h1 class="contentTitle">
-			{lang}wcf.acp.page.kimaiUserList.title{/lang}
-		</h1>
-	</div>
+		<nav class="contentHeaderNavigation">
+			<ul>
+				{@$resetButton}
 
-	<nav class="contentHeaderNavigation">
-		<ul>
-			{@$resetButton}
+				{event name='contentHeaderNavigation'}
+			</ul>
+		</nav>
+	</header>
+{/capture}
 
-			{event name='contentHeaderNavigation'}
-		</ul>
-	</nav>
-</header>
+{include file='header' contentHeader=$__contentHeader}
 
 <div class="section">
 	{if $users|isset && $users|count}
@@ -47,9 +49,11 @@
 
 <footer class="contentFooter">
 	<nav class="contentFooterNavigation">
-		{@$resetButton}
+		<ul>
+			{@$resetButton}
 
-		{event name='contentFooterNavigation'}
+			{event name='contentFooterNavigation'}
+		</ul>
 	</nav>
 </footer>
 
